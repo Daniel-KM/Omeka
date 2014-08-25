@@ -1,7 +1,7 @@
 <?php
 /**
  * Omeka
- * 
+ *
  * @copyright Copyright 2007-2012 Roy Rosenzweig Center for History and New Media
  * @license http://www.gnu.org/licenses/gpl-3.0.txt GNU GPLv3
  */
@@ -16,56 +16,44 @@ class Table_File extends Omeka_Db_Table
     public function applySearchFilters($select, $params)
     {
         $boolean = new Omeka_Filter_Boolean;
-        
-        foreach ($params as $paramName => $paramValue) {
-            if ($paramValue === null || (is_string($paramValue) && trim($paramValue) == '')) {
+        $genericParams = array();
+        foreach ($params as $key => $value) {
+            if ($value === null || (is_string($value) && trim($value) == '')) {
                 continue;
             }
-
-            switch($paramName) {
+            switch ($key) {
                 case 'item':
-                case 'item_id':
-                    $select->where('files.item_id = ?', $paramValue);
+                    $genericParams['item_id'] = $value;
                     break;
-                    
                 case 'order':
-                    if($paramValue == 'null') {
+                    if($value == 'null') {
                         $select->where('files.order IS NULL');
                     } else {
-                        $select->where('files.order = ?', $paramValue);
+                        $select->where('files.order = ?', $value);
                     }
                     break;
-                    
-                case 'original_filename':
-                    $select->where('files.original_filename = ?', $paramValue);
-                    break;
-
                 case 'size_greater_then':
-                    $select->where('files.size > ?', $paramValue);
+                    $select->where('files.size > ?', $value);
                     break;
-                    
                 case 'has_derivative_image':
-                    $this->filterByHasDerivativeImage($select, $boolean->filter($paramValue));
+                    $this->filterByHasDerivativeImage($select, $boolean->filter($value));
                     break;
-                    
-                case 'mime_type':
-                    $select->where('files.mime_type = ?', $paramValue);
-                    break;
-                    
                 case 'added_since':
-                    $this->filterBySince($select, $paramValue, 'added');
+                    $this->filterBySince($select, $value, 'added');
                     break;
-                    
                 case 'modified_since':
-                    $this->filterBySince($select, $paramValue, 'modified');
+                    $this->filterBySince($select, $value, 'modified');
                     break;
-
                 default:
-                    parent::applySearchFilters($select, array($key => $value));
+                    $genericParams[$key] = $value;
             }
         }
+
+        if (!empty($genericParams)) {
+            parent::applySearchFilters($select, $genericParams);
+        }
     }
-    
+
     /**
      * Filter select object by date since.
      *
