@@ -1154,10 +1154,10 @@ function head_js($includeDefaults = true)
         } else {
             $dir = 'javascripts';
             $headScript->prependScript('jQuery.noConflict();')
-                    ->prependScript('window.jQuery.ui || document.write(' . js_escape(js_tag('vendor/jquery-ui')) . ')')
-                    ->prependFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
-                    ->prependScript('window.jQuery || document.write(' . js_escape(js_tag('vendor/jquery')) . ')')
-                    ->prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js');
+                ->prependScript('window.jQuery.ui || document.write(' . js_escape(js_tag('vendor/jquery-ui')) . ')')
+                ->prependFile('//code.jquery.com/ui/1.11.4/jquery-ui.min.js')
+                ->prependScript('window.jQuery || document.write(' . js_escape(js_tag('vendor/jquery')) . ')')
+                ->prependFile('//code.jquery.com/jquery-1.12.0.min.js');
         }
     }
     return $headScript;
