@@ -35,7 +35,9 @@ function admin_bar() {
  * Styles for admin bar.
  */
 function admin_bar_css() {
-    queue_css_url('//fonts.googleapis.com/css?family=Arvo:400', 'screen');
+    if (!useInternalAssets()) {
+        queue_css_url('//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Cabin:400,700,400italic,700italic', 'screen');
+    }
     queue_css_file('admin-bar', 'screen');
 }
 

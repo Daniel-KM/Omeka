@@ -1147,11 +1147,7 @@ function head_js($includeDefaults = true)
     $headScript = get_view()->headScript();
 
     if ($includeDefaults) {
-        $config = Zend_Registry::get('bootstrap')->getResource('Config');
-        $useInternalAssets = isset($config->theme->useInternalAssets)
-           ? (bool) $config->theme->useInternalAssets
-           : true;
-        if ($useInternalAssets) {
+        if (useInternalAssets()) {
             $headScript->prependScript('jQuery.noConflict();')
                 ->prependFile(src('vendor/jquery-ui', 'javascripts', 'js'))
                 ->prependFile(src('vendor/jquery', 'javascripts', 'js'));
@@ -1165,6 +1161,22 @@ function head_js($includeDefaults = true)
         }
     }
     return $headScript;
+}
+
+/**
+ * Check the config to use internal assets or not, in order to respect privacy.
+ *
+ * Default is true.
+ *
+ * @return boolean
+ */
+function useInternalAssets()
+{
+    $config = Zend_Registry::get('bootstrap')->getResource('Config');
+    $useInternalAssets = isset($config->theme->useInternalAssets)
+       ? (bool) $config->theme->useInternalAssets
+        : true;
+    return $useInternalAssets;
 }
 
 /**
