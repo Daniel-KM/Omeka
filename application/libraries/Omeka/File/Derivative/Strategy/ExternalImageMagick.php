@@ -95,7 +95,7 @@ class Omeka_File_Derivative_Strategy_ExternalImageMagick
     {
         $version = $this->getOption('version', '0');
 
-        if ($type != 'square_thumbnail') {
+        if (substr($type, 0, 7) != 'square_') {
             $args = array(
                 '-background white',
                 '+repage',
