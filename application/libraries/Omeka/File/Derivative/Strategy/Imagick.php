@@ -53,7 +53,7 @@ class Omeka_File_Derivative_Strategy_Imagick
         $imagick->setImageBackgroundColor('white');
         $imagick = $imagick->mergeImageLayers(Imagick::LAYERMETHOD_FLATTEN);
 
-        if ($type != 'square_thumbnail') {
+        if (substr($type, 0, 7) != 'square_') {
             $imagick->thumbnailImage($sizeConstraint, $sizeConstraint, true);
         } else {
             // We could use cropThumbnailImage here but it lacks support for
