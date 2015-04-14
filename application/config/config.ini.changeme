@@ -228,6 +228,10 @@ mail.transport.type = "Sendmail"
 ; "always"
 ;   Force SSL on across the entire site.
 ;
+; "always except oai-pmh via http"
+;   Force SSL on across the entire site, except for request on oai-pmh via http
+;   in order to respect very strictly the OAI-PMH protocol (asked by BnF).
+;
 ; ssl = "always"
 
 ;;;;;;;;;;
