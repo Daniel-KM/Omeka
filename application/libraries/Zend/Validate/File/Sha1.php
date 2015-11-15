@@ -45,9 +45,9 @@ class Zend_Validate_File_Sha1 extends Zend_Validate_File_Hash
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::DOES_NOT_MATCH => "File '%value%' does not match the given sha1 hashes",
-        self::NOT_DETECTED   => "A sha1 hash could not be evaluated for the given file",
-        self::NOT_FOUND      => "File '%value%' is not readable or does not exist",
+        'fileSha1DoesNotMatch' => "File '%value%' does not match the given sha1 hashes",
+        'fileSha1NotDetected'   => "A sha1 hash could not be evaluated for the given file",
+        'fileSha1NotFound'      => "File '%value%' is not readable or does not exist",
     );
 
     /**

@@ -42,9 +42,9 @@ class Zend_Validate_Date extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::INVALID        => "Invalid type given. String, integer, array or Zend_Date expected",
-        self::INVALID_DATE   => "'%value%' does not appear to be a valid date",
-        self::FALSEFORMAT    => "'%value%' does not fit the date format '%format%'",
+        'dateInvalid'        => "Invalid type given. String, integer, array or Zend_Date expected",
+        'dateInvalidDate'   => "'%value%' does not appear to be a valid date",
+        'dateFalseFormat'    => "'%value%' does not fit the date format '%format%'",
     );
 
     /**

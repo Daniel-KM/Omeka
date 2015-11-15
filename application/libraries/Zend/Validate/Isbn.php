@@ -44,8 +44,8 @@ class Zend_Validate_Isbn extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::INVALID => "Invalid type given. String or integer expected",
-        self::NO_ISBN => "'%value%' is not a valid ISBN number",
+        'isbnInvalid' => "Invalid type given. String or integer expected",
+        'isbnNoIsbn' => "'%value%' is not a valid ISBN number",
     );
 
     /**

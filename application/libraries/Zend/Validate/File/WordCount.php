@@ -46,9 +46,9 @@ class Zend_Validate_File_WordCount extends Zend_Validate_File_Count
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::TOO_MUCH => "Too much words, maximum '%max%' are allowed but '%count%' were counted",
-        self::TOO_LESS => "Too less words, minimum '%min%' are expected but '%count%' were counted",
-        self::NOT_FOUND => "File '%value%' is not readable or does not exist",
+        'fileWordCountTooMuch' => "Too much words, maximum '%max%' are allowed but '%count%' were counted",
+        'fileWordCountTooLess' => "Too less words, minimum '%min%' are expected but '%count%' were counted",
+        'fileWordCountNotFound' => "File '%value%' is not readable or does not exist",
     );
 
     /**

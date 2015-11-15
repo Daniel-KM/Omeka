@@ -53,16 +53,16 @@ class Zend_Validate_File_Upload extends Zend_Validate_Abstract
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::INI_SIZE       => "File '%value%' exceeds the defined ini size",
-        self::FORM_SIZE      => "File '%value%' exceeds the defined form size",
-        self::PARTIAL        => "File '%value%' was only partially uploaded",
-        self::NO_FILE        => "File '%value%' was not uploaded",
-        self::NO_TMP_DIR     => "No temporary directory was found for file '%value%'",
-        self::CANT_WRITE     => "File '%value%' can't be written",
-        self::EXTENSION      => "A PHP extension returned an error while uploading the file '%value%'",
-        self::ATTACK         => "File '%value%' was illegally uploaded. This could be a possible attack",
-        self::FILE_NOT_FOUND => "File '%value%' was not found",
-        self::UNKNOWN        => "Unknown error while uploading file '%value%'"
+        'fileUploadErrorIniSize'       => "File '%value%' exceeds the defined ini size",
+        'fileUploadErrorFormSize'      => "File '%value%' exceeds the defined form size",
+        'fileUploadErrorPartial'        => "File '%value%' was only partially uploaded",
+        'fileUploadErrorNoFile'        => "File '%value%' was not uploaded",
+        'fileUploadErrorNoTmpDir'     => "No temporary directory was found for file '%value%'",
+        'fileUploadErrorCantWrite'     => "File '%value%' can't be written",
+        'fileUploadErrorExtension'      => "A PHP extension returned an error while uploading the file '%value%'",
+        'fileUploadErrorAttack'         => "File '%value%' was illegally uploaded. This could be a possible attack",
+        'fileUploadErrorFileNotFound' => "File '%value%' was not found",
+        'fileUploadErrorUnknown'        => "Unknown error while uploading file '%value%'"
     );
 
     /**

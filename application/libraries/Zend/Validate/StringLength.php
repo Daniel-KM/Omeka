@@ -40,9 +40,9 @@ class Zend_Validate_StringLength extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::INVALID   => "Invalid type given. String expected",
-        self::TOO_SHORT => "'%value%' is less than %min% characters long",
-        self::TOO_LONG  => "'%value%' is more than %max% characters long",
+        'stringLengthInvalid'   => "Invalid type given. String expected",
+        'stringLengthTooShort' => "'%value%' is less than %min% characters long",
+        'stringLengthTooLong'  => "'%value%' is more than %max% characters long",
     );
 
     /**

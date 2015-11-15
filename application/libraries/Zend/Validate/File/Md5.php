@@ -45,9 +45,9 @@ class Zend_Validate_File_Md5 extends Zend_Validate_File_Hash
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::DOES_NOT_MATCH => "File '%value%' does not match the given md5 hashes",
-        self::NOT_DETECTED   => "A md5 hash could not be evaluated for the given file",
-        self::NOT_FOUND      => "File '%value%' is not readable or does not exist",
+        'fileMd5DoesNotMatch' => "File '%value%' does not match the given md5 hashes",
+        'fileMd5NotDetected'   => "A md5 hash could not be evaluated for the given file",
+        'fileMd5NotFound'      => "File '%value%' is not readable or does not exist",
     );
 
     /**

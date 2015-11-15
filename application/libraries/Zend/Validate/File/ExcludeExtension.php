@@ -44,8 +44,8 @@ class Zend_Validate_File_ExcludeExtension extends Zend_Validate_File_Extension
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::FALSE_EXTENSION => "File '%value%' has a false extension",
-        self::NOT_FOUND       => "File '%value%' is not readable or does not exist",
+        'fileExcludeExtensionFalse' => "File '%value%' has a false extension",
+        'fileExcludeExtensionNotFound'       => "File '%value%' is not readable or does not exist",
     );
 
     /**

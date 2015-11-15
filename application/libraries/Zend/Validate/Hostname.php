@@ -62,17 +62,17 @@ class Zend_Validate_Hostname extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::CANNOT_DECODE_PUNYCODE  => "'%value%' appears to be a DNS hostname but the given punycode notation cannot be decoded",
-        self::INVALID                 => "Invalid type given. String expected",
-        self::INVALID_DASH            => "'%value%' appears to be a DNS hostname but contains a dash in an invalid position",
-        self::INVALID_HOSTNAME        => "'%value%' does not match the expected structure for a DNS hostname",
-        self::INVALID_HOSTNAME_SCHEMA => "'%value%' appears to be a DNS hostname but cannot match against hostname schema for TLD '%tld%'",
-        self::INVALID_LOCAL_NAME      => "'%value%' does not appear to be a valid local network name",
-        self::INVALID_URI             => "'%value%' does not appear to be a valid URI hostname",
-        self::IP_ADDRESS_NOT_ALLOWED  => "'%value%' appears to be an IP address, but IP addresses are not allowed",
-        self::LOCAL_NAME_NOT_ALLOWED  => "'%value%' appears to be a local network name but local network names are not allowed",
-        self::UNDECIPHERABLE_TLD      => "'%value%' appears to be a DNS hostname but cannot extract TLD part",
-        self::UNKNOWN_TLD             => "'%value%' appears to be a DNS hostname but cannot match TLD against known list",
+        'hostnameCannotDecodePunycode'  => "'%value%' appears to be a DNS hostname but the given punycode notation cannot be decoded",
+        'hostnameInvalid'                 => "Invalid type given. String expected",
+        'hostnameDashCharacter'            => "'%value%' appears to be a DNS hostname but contains a dash in an invalid position",
+        'hostnameInvalidHostname'        => "'%value%' does not match the expected structure for a DNS hostname",
+        'hostnameInvalidHostnameSchema' => "'%value%' appears to be a DNS hostname but cannot match against hostname schema for TLD '%tld%'",
+        'hostnameInvalidLocalName'      => "'%value%' does not appear to be a valid local network name",
+        'hostnameInvalidUri'             => "'%value%' does not appear to be a valid URI hostname",
+        'hostnameIpAddressNotAllowed'  => "'%value%' appears to be an IP address, but IP addresses are not allowed",
+        'hostnameLocalNameNotAllowed'  => "'%value%' appears to be a local network name but local network names are not allowed",
+        'hostnameUndecipherableTld'      => "'%value%' appears to be a DNS hostname but cannot extract TLD part",
+        'hostnameUnknownTld'             => "'%value%' appears to be a DNS hostname but cannot match TLD against known list",
     );
 
     /**

@@ -67,21 +67,21 @@ class Zend_View_Helper_Navigation_Links
      * @var array
      */
     protected static $_RELATIONS = array(
-        self::RENDER_ALTERNATE  => 'alternate',
-        self::RENDER_STYLESHEET => 'stylesheet',
-        self::RENDER_START      => 'start',
-        self::RENDER_NEXT       => 'next',
-        self::RENDER_PREV       => 'prev',
-        self::RENDER_CONTENTS   => 'contents',
-        self::RENDER_INDEX      => 'index',
-        self::RENDER_GLOSSARY   => 'glossary',
-        self::RENDER_COPYRIGHT  => 'copyright',
-        self::RENDER_CHAPTER    => 'chapter',
-        self::RENDER_SECTION    => 'section',
-        self::RENDER_SUBSECTION => 'subsection',
-        self::RENDER_APPENDIX   => 'appendix',
-        self::RENDER_HELP       => 'help',
-        self::RENDER_BOOKMARK   => 'bookmark'
+        0x0001  => 'alternate',
+        0x0002 => 'stylesheet',
+        0x0004      => 'start',
+        0x0008       => 'next',
+        0x0010       => 'prev',
+        0x0020   => 'contents',
+        0x0040      => 'index',
+        0x0080   => 'glossary',
+        0x0100  => 'copyright',
+        0x0200    => 'chapter',
+        0x0400    => 'section',
+        0x0800 => 'subsection',
+        0x1000   => 'appendix',
+        0x2000       => 'help',
+        0x4000   => 'bookmark'
     );
 
     /**

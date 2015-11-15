@@ -42,10 +42,10 @@ class HTMLPurifier_VarParser
      * allowed value lists.
      */
     public static $stringTypes = array(
-        self::STRING => true,
-        self::ISTRING => true,
-        self::TEXT => true,
-        self::ITEXT => true,
+        1 => true,
+        2 => true,
+        3 => true,
+        4 => true,
     );
 
     /**

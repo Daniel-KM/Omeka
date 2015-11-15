@@ -166,10 +166,10 @@ class Zend_Console_Getopt
      * parseAll is enabled.
      */
     protected $_getoptConfig = array(
-        self::CONFIG_RULEMODE   => self::MODE_ZEND,
-        self::CONFIG_DASHDASH   => true,
-        self::CONFIG_IGNORECASE => false,
-        self::CONFIG_PARSEALL   => true,
+        'ruleMode'   => self::MODE_ZEND,
+        'dashDash'   => true,
+        'ignoreCase' => false,
+        'parseAll'   => true,
     );
 
     /**

@@ -45,17 +45,17 @@ class Zend_Filter_Boolean implements Zend_Filter_Interface
     const ALL          = 511;
 
     protected $_constants = array(
-        self::BOOLEAN      => 'boolean',
-        self::INTEGER      => 'integer',
-        self::FLOAT        => 'float',
-        self::STRING       => 'string',
-        self::ZERO         => 'zero',
-        self::EMPTY_ARRAY  => 'array',
-        self::NULL         => 'null',
-        self::PHP          => 'php',
-        self::FALSE_STRING => 'false',
-        self::YES          => 'yes',
-        self::ALL          => 'all',
+        1      => 'boolean',
+        2      => 'integer',
+        4       => 'float',
+        8       => 'string',
+        16         => 'zero',
+        32  => 'array',
+        64         => 'null',
+        127          => 'php',
+        128 => 'false',
+        256          => 'yes',
+        511          => 'all',
     );
 
     /**

@@ -124,17 +124,17 @@ class Zend_Db_Select
      * @var array
      */
     protected static $_partsInit = array(
-        self::DISTINCT     => false,
-        self::COLUMNS      => array(),
-        self::UNION        => array(),
-        self::FROM         => array(),
-        self::WHERE        => array(),
-        self::GROUP        => array(),
-        self::HAVING       => array(),
-        self::ORDER        => array(),
-        self::LIMIT_COUNT  => null,
-        self::LIMIT_OFFSET => null,
-        self::FOR_UPDATE   => false
+        'distinct'     => false,
+        'columns'      => array(),
+        'union'        => array(),
+        'from'         => array(),
+        'where'        => array(),
+        'group'        => array(),
+        'having'       => array(),
+        'order'        => array(),
+        'limitcount'  => null,
+        'limitoffset' => null,
+        'forupdate'   => false
     );
 
     /**

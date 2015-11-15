@@ -130,12 +130,12 @@ class Zend_Filter_Input
      * @var array Default values to use when processing filters and validators.
      */
     protected $_defaults = array(
-        self::ALLOW_EMPTY         => false,
-        self::BREAK_CHAIN         => false,
-        self::ESCAPE_FILTER       => 'HtmlEntities',
-        self::MISSING_MESSAGE     => "Field '%field%' is required by rule '%rule%', but the field is missing",
-        self::NOT_EMPTY_MESSAGE   => "You must give a non-empty value for field '%field%'",
-        self::PRESENCE            => self::PRESENCE_OPTIONAL
+        'allowEmpty'         => false,
+        'breakChainOnFailure'         => false,
+        'escapeFilter'       => 'HtmlEntities',
+        'missingMessage'     => "Field '%field%' is required by rule '%rule%', but the field is missing",
+        'notEmptyMessage'   => "You must give a non-empty value for field '%field%'",
+        'presence'            => self::PRESENCE_OPTIONAL
     );
 
     /**

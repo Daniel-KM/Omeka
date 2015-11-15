@@ -56,8 +56,8 @@ class Zend_Validate_Sitemap_Loc extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::NOT_VALID => "'%value%' is not a valid sitemap location",
-        self::INVALID   => "Invalid type given. String expected",
+        'sitemapLocNotValid' => "'%value%' is not a valid sitemap location",
+        'sitemapLocInvalid'   => "Invalid type given. String expected",
     );
 
     /**

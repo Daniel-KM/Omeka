@@ -17,7 +17,7 @@ class Omeka_Validate_Uri extends Zend_Validate_Abstract
     const MSG_URI = 'msgUri';
 
     protected $_messageTemplates = array(
-        self::MSG_URI => "Invalid URI",
+        'msgUri' => "Invalid URI",
     );
 
     public function isValid($value)

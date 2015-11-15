@@ -21,17 +21,17 @@ class HTMLPurifier_UnitConverter
      * the number of measuring systems is small.)
      */
     protected static $units = array(
-        self::ENGLISH => array(
+        1 => array(
             'px' => 3, // This is as per CSS 2.1 and Firefox. Your mileage may vary
             'pt' => 4,
             'pc' => 48,
             'in' => 288,
-            self::METRIC => array('pt', '0.352777778', 'mm'),
+            2 => array('pt', '0.352777778', 'mm'),
         ),
-        self::METRIC => array(
+        2 => array(
             'mm' => 1,
             'cm' => 10,
-            self::ENGLISH => array('mm', '2.83464567', 'pt'),
+            1 => array('mm', '2.83464567', 'pt'),
         ),
     );
 

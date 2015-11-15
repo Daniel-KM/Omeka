@@ -45,9 +45,9 @@ class Zend_Validate_File_Crc32 extends Zend_Validate_File_Hash
      * @var array Error message templates
      */
     protected $_messageTemplates = array(
-        self::DOES_NOT_MATCH => "File '%value%' does not match the given crc32 hashes",
-        self::NOT_DETECTED   => "A crc32 hash could not be evaluated for the given file",
-        self::NOT_FOUND      => "File '%value%' is not readable or does not exist",
+        'fileCrc32DoesNotMatch' => "File '%value%' does not match the given crc32 hashes",
+        'fileCrc32NotDetected'   => "A crc32 hash could not be evaluated for the given file",
+        'fileCrc32NotFound'      => "File '%value%' is not readable or does not exist",
     );
 
     /**

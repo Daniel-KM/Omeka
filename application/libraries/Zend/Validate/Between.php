@@ -48,8 +48,8 @@ class Zend_Validate_Between extends Zend_Validate_Abstract
      * @var array
      */
     protected $_messageTemplates = array(
-        self::NOT_BETWEEN        => "'%value%' is not between '%min%' and '%max%', inclusively",
-        self::NOT_BETWEEN_STRICT => "'%value%' is not strictly between '%min%' and '%max%'"
+        'notBetween'        => "'%value%' is not between '%min%' and '%max%', inclusively",
+        'notBetweenStrict' => "'%value%' is not strictly between '%min%' and '%max%'"
     );
 
     /**

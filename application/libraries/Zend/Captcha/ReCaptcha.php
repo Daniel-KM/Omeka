@@ -83,9 +83,9 @@ class Zend_Captcha_ReCaptcha extends Zend_Captcha_Base
      * @var array
      */
     protected $_messageTemplates = array(
-        self::MISSING_VALUE => 'Missing captcha fields',
-        self::ERR_CAPTCHA   => 'Failed to validate captcha',
-        self::BAD_CAPTCHA   => 'Captcha value is wrong: %value%',
+        'missingValue' => 'Missing captcha fields',
+        'errCaptcha'   => 'Failed to validate captcha',
+        'badCaptcha'   => 'Captcha value is wrong: %value%',
     );
 
     /**
