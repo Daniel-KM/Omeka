@@ -19,6 +19,8 @@ if (!Omeka) {
             theme_advanced_toolbar_location: "top",
             theme_advanced_statusbar_location: "none",
             theme_advanced_toolbar_align: "left",
+// START OF CUSTOM.
+/*
             theme_advanced_buttons1: "bold,italic,underline,|,justifyleft,justifycenter,justifyright,|,bullist,numlist,|,link,formatselect,code",
             theme_advanced_buttons2: "",
             theme_advanced_buttons3: "",
@@ -27,6 +29,26 @@ if (!Omeka) {
             media_strict: false,
             width: "100%",
             autoresize_max_height: 500,
+*/
+            theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect",
+            theme_advanced_buttons2 : "bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code",
+            theme_advanced_buttons3 : "hr,removeformat,visualaid,|,sub,sup,|,charmap",
+            theme_advanced_blockformats: "p,address,pre,h1,h2,h3,h4,h5,h6,blockquote,address,div",
+            plugins: "paste,inlinepopups,media,autoresize",
+            media_strict: false,
+//            width: "100%",
+resize: "both",
+//            autoresize_max_height: 500,
+
+            theme_advanced_fonts : "Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats",
+            theme_advanced_more_colors : 1,
+            theme_advanced_row_height : 23,
+            theme_advanced_resize_horizontal : 1,
+            theme_advanced_resizing_use_cookie : 1,
+            theme_advanced_font_sizes : "1,2,3,4,5,6,7",
+            theme_advanced_font_selector : "span",
+            theme_advanced_show_current_color: 0,
+// END OF CUSTOM.
             entities: "160,nbsp,173,shy,8194,ensp,8195,emsp,8201,thinsp,8204,zwnj,8205,zwj,8206,lrm,8207,rlm",
             verify_html: false,
             add_unload_trigger: false
