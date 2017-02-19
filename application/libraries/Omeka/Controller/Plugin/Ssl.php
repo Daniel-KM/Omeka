@@ -16,6 +16,7 @@ class Omeka_Controller_Plugin_Ssl extends Zend_Controller_Plugin_Abstract
     const LOGINS = 'logins';
     const SESSIONS = 'sessions';
     const ALWAYS = 'always';
+    const ALWAYS_EXCEPT_OAIPMH_VIA_HTTP = 'always except oai-pmh via http';
 
     private $_sslConfig;
 
@@ -58,7 +59,7 @@ class Omeka_Controller_Plugin_Ssl extends Zend_Controller_Plugin_Abstract
     {
         // Logins should be protected in all configurations.
         if (!in_array($this->_sslConfig, array(
-            self::LOGINS, self::SESSIONS, self::ALWAYS
+            self::LOGINS, self::SESSIONS, self::ALWAYS, self::ALWAYS_EXCEPT_OAIPMH_VIA_HTTP
         ))) {
             return false;
         }
@@ -98,6 +99,10 @@ class Omeka_Controller_Plugin_Ssl extends Zend_Controller_Plugin_Abstract
 
     private function _secureAllRequests()
     {
+        if ($this->_sslConfig == self::ALWAYS_EXCEPT_OAIPMH_VIA_HTTP) {
+            return $_SERVER['REDIRECT_URL'] != '/oai-pmh';
+        }
+
         return $this->_sslConfig == self::ALWAYS;
     }
 }
