@@ -7,6 +7,7 @@ if ($itemTitle != '' && $itemTitle != __('[Untitled]')) {
 }
 $itemTitle = __('Item #%s', metadata('item', 'id')) . $itemTitle;
 
+queue_js_file('vendor/jquery.lazyload');
 
 echo head(array('title' => $itemTitle, 'bodyclass'=>'items show'));
 echo flash();
@@ -14,12 +15,18 @@ echo flash();
 
 <section class="seven columns alpha">
     <?php echo flash(); ?>
-    <?php
-    echo item_image_gallery(
-        array('linkWrapper' => array('class' => 'admin-thumb panel')),
-        'square_thumbnail', true);
-    ?>
     <?php echo all_element_texts('item'); ?>
+    <?php
+//        $files = array_slice($item->Files, 0, 1000);
+        $files = $item->Files;
+        echo $this->imagesGallery(
+            array('linkWrapper' => array('class' => 'admin-thumb panel')),
+            'square_thumbnail',
+            'show',
+            $files,
+            'image',
+             true);
+    ?>
     <?php fire_plugin_hook('admin_items_show', array('item' => $item, 'view' => $this)); ?>
 </section>
 
